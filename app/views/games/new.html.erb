@@ -1,0 +1,21 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WORD GAME</title>
+</head>
+<body>
+  <table class="letters">
+    <%@letters.each do |letter| %>
+    <td><%= letter %></td>
+    <% end %>
+  </table>
+  <h2>What is your best guess?</h2>
+  <form action="/games/score">
+    <input type="text" name="user_argument">
+    <input type="submit" value="Guess!">
+  </form>
+</body>
+</html>
